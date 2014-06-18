@@ -1,21 +1,27 @@
-﻿$(window).on('scroll', function(){
+﻿function fixedmenu() {
+	$('.menu').addClass('fixed');
+	$('.header').css({'margin-bottom': '57px'});
+	$('.header .basket').addClass('fixed');
+	$('.header .basket').css({'position': 'fixed', 'right': '50%', 'padding': '7px 0 1px', 'margin': '0 -480px 0 0'});
+	$('.menu ul li').animate({'margin-left': '2px'}, {queue: false}, 750);
+	$('.menu ul').animate({'padding-left': '62px'}, {queue: false}, 750);
+	$('.menu .logo').animate({'left': '50%', 'margin-left': '-480px'}, {queue: false}, 750);
+}
+function staticmenu() {
+	$('.menu').removeClass('fixed');
+	$('.header').css({'margin-bottom': '0'});
+	$('.header .basket').removeClass('fixed');
+	$('.header .basket').css({'position': 'absolute', 'right': '0', 'padding': '66px 0 21px', 'margin': '0'});
+	$('.menu ul li').animate({'margin-left': '39px'}, {queue: false}, 750);
+	$('.menu ul').animate({'padding-left': '3px'}, {queue: false}, 750);
+	$('.menu .logo').animate({'left': '0', 'margin-left': '-39px'}, {queue: false}, 750);
+}
+$(window).on('scroll', function(){
 	if ( $(window).scrollTop() > $('.header').height() ) {
-		$('.menu').addClass('fixed');
-		$('.header').css({'margin-bottom': '57px'});
-		$('.header .basket').addClass('fixed');
-		$('.header .basket').css({'position': 'fixed', 'right': '50%', 'padding': '7px 0 1px', 'margin': '0 -480px 0 0'});
-		$('.menu ul li').animate({'margin-left': '2px'}, {queue: false}, 750);
-		$('.menu ul').animate({'padding-left': '62px'}, {queue: false}, 750);
-		$('.menu .logo').animate({'left': '50%', 'margin-left': '-480px'}, {queue: false}, 750);
+		fixedmenu();
 	}
 	else {
-		$('.menu').removeClass('fixed');
-		$('.header').css({'margin-bottom': '0'});
-		$('.header .basket').removeClass('fixed');
-		$('.header .basket').css({'position': 'absolute', 'right': '0', 'padding': '66px 0 21px', 'margin': '0'});
-		$('.menu ul li').animate({'margin-left': '39px'}, {queue: false}, 750);
-		$('.menu ul').animate({'padding-left': '3px'}, {queue: false}, 750);
-		$('.menu .logo').animate({'left': '0', 'margin-left': '-39px'}, {queue: false}, 750);
+		staticmenu();
 	}
 });
 function steps() {
@@ -43,6 +49,19 @@ function process() {
 		}
 	});
 }
+function foureasons() {
+	$('.foureasons ul li img').hide();
+	$('.foureasons ul li img').css({'top': - ($(window).height()-106) + 'px'});
+	$(window).scroll(function() {
+		if ( $(window).scrollTop() > $('.foureasons').position().top - $(window).height() + 336 ) {
+			$('.foureasons ul li img').show();
+			$('.foureasons ul li:nth-child(1) img').animate({'top': '0'}, 750, 'easeOutQuart');
+			$('.foureasons ul li:nth-child(2) img').delay(250).animate({'top': '0'}, 750, 'easeOutQuart');
+			$('.foureasons ul li:nth-child(3) img').delay(500).animate({'top': '0'}, 750, 'easeOutQuart');
+			$('.foureasons ul li:nth-child(4) img').delay(750).animate({'top': '0'}, 750, 'easeOutQuart');
+		}
+	});
+}
 function reasons() {
 	$('.reasons .float').hide();
 	$('.reasons .float').css({'margin-top': - ($(window).height()-300+$('.reasons .float').height()) + 'px'});
@@ -54,9 +73,18 @@ function reasons() {
 	});
 }
 $(document).ready(function() {
-	reasons();
-	process();
-	steps();
+	if ( $('.reasons .float').length > 0 ) {
+		reasons();
+	}
+	if ( $('.process').length > 0 ) {
+		process();
+	}
+	if ( $('.foureasons').length > 0 ) {
+		foureasons();
+	}
+	if ( $('.steps').length > 0 ) {
+		steps();
+	}
 	$('.slider > div').slides({
 		generatePagination: false,
 		generateNextPrev: true,
@@ -93,28 +121,26 @@ $(document).ready(function() {
 		});
 	});
 	$('.catalog > div > div').append('<div class="hover"></div>');
-	$('.events h3, .process h3, .delivery h3').each(function() {
+	$('.events h3, .process h3, .delivery h3, .catalog h2, .foureasons h3').each(function() {
 		$(this).append('<em class="before" style="width:'+(960-$(this).find('span').width()-72)/2+'px">');
 		$(this).append('<em class="after" style="width:'+(960-$(this).find('span').width()-72)/2+'px">');
 	});
 	$('a.zoom').fancybox();
-	$('.modal.call').each(function() {
-		$(this).css({'margin-top': -$(this).innerHeight()/2+'px'});
-	});
-	$('.modal.fastorder').each(function() {
+	$('.modal').each(function() {
 		$(this).css({'margin-top': -$(this).innerHeight()/2+'px'});
 	});
 	$('.modal').append('<span class="close"></span>');
 	var bh = 0;
 	$('.header .call button').bind('click', function() {
 		$('.modal.call, .fade').fadeIn(250);
-		bh = $('body').scrollTop();
+		bh = $(window).scrollTop();
 		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
 		return false;
 	});
 	$('.catalog > div > div .fast').bind('click', function() {
 		$('.modal.fastorder, .fade').fadeIn(250);
-		bh = $('body').scrollTop();
+		bh = $(window).scrollTop();
+		console.log(bh);
 		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
 		return false;
 	});
@@ -122,14 +148,14 @@ $(document).ready(function() {
 		$(this).parent().fadeOut(250);
 		$('.fade').fadeOut(250);
 		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
-		$('body').scrollTop(bh);
+		$(window).scrollTop(bh);
 		return false;
 	});
 	$('.fade').bind('click', function() {
 		$(this).fadeOut(250);
 		$('.modal').fadeOut(250);
 		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
-		$('body').scrollTop(bh);
+		$(window).scrollTop(bh);
 		return false;
 	});
 	$('input, textarea').each(function () {
@@ -142,21 +168,21 @@ $(document).ready(function() {
 		});
 	});
 	var color;
-	$('.modal.fastorder .options div .color li').bind('click', function() {
+	$('.options div .color li').bind('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		color = $(this).attr('data-color');
 		console.log('Выбран цвет: '+color);
 		return false;
 	});
 	var size;
-	$('.modal.fastorder .options div .size li').bind('click', function() {
+	$('.options div .size li').bind('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		size = $(this).attr('data-size');
 		console.log('Выбран размер: '+size);
 		return false;
 	});
 	var gift;
-	$('.modal.fastorder .gift ul li').bind('click', function() {
+	$('.gift ul li').bind('click', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		gift = $(this).attr('data-gift');
 		console.log('Выбран подарок: '+gift);
@@ -172,5 +198,56 @@ $(document).ready(function() {
 		pause: 2500
 	});
 	$('.countdown.num1').countdown({ until: new Date(2014, 7-1, 1)}); 
-	$('.countdown.num2').countdown({ until: new Date(2014, 8-1, 1)}); 
+	$('.countdown.num2').countdown({ until: new Date(2014, 8-1, 1)});
+	if ( $('.catalog').next('.reviews').length > 0 ) {
+		$('.catalog').addClass('shadow');
+	}
+	if ( $('.reviews').next('.footer').length > 0 ) {
+		$('.reviews > div').css({'background': '#ffffff'});
+		$('.reviews > div > div').css({'padding-bottom': '42px'});
+	}
+	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+	$('select').selectbox();
+	$('.mainbasket > div > div button').bind('click', function() {
+		$('.fade, .modal.payment').fadeIn(250);
+		bh = $(window).scrollTop();
+		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		return false;
+	});
+	$('.modal.payment > div > div button').bind('click', function() {
+		$('.modal.payment').fadeOut(250);
+		$('.modal.message').fadeIn(250);
+		return false;
+	});
+	$('.modal.message > div .back').bind('click', function() {
+		$('.modal.message').fadeOut(250);
+		$('.modal.payment').fadeIn(250);
+		return false;
+	});
+	$('.pages ul li').append('<span>-</span>');
+	$('.pages ul li.active').next().find('span').hide();
+	$('.pages > div').each(function() {
+		$(this).append('<em class="before" style="width:'+(960-$(this).find('div').width()-46)/2+'px">');
+		$(this).append('<em class="after" style="width:'+(960-$(this).find('div').width()-46)/2+'px">');
+	});
+	if ( $('.reviews').next('.process').length > 0 ) {
+		$('.reviews').css({'margin-bottom': '-5px'});
+		$('.process').addClass('after');
+	}
+	if ( $('.process').next('.delivery').length > 0 ) {
+		$('.delivery').addClass('nobg');
+	}
 });

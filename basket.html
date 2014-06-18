@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>FunMe</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./fancybox/fancybox.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./fancybox/fancybox.js"></script>
+	<script type="text/javascript" src="./js/plugin.js"></script>
+	<script type="text/javascript" src="./js/countdown.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<a href="#"><img src="./img/logo.png" width="141" height="141" class="logo" alt=""></a>
+				<h5>Оптово-розничный<br> магазин игрушек<br> с доставкой по всей России</h5>
+				<div class="call">
+					<p>Звонок по России бесплатный</p>
+					<h3>8 800 775 9318</h3>
+					<div>
+						<button>Заказ звонка</button>
+					</div>
+				</div>
+				<div class="basket">
+					<a href="#">
+						<p>2 товара<br> на сумму</p>
+						<h5>2500<em>c</em></h5>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div>
+				<a href="#"><img src="./img/menu_logo.png" width="39" height="38" class="logo" alt=""></a>
+				<ul>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">О магазине</a></li>
+					<li><a href="#">Оплата и доставка</a></li>
+					<li><a href="#">Оптовикам</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Акции</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainbasket">
+			<h6><a href="#">Вернуться к покупкам</a></h6>
+			<table>
+				<thead>
+					<tr>
+						<th class="photo">Товар</th>
+						<th class="title"></th>
+						<th class="size">Размер</th>
+						<th class="color">Цвет</th>
+						<th class="quantity">Кол-во</th>
+						<th class="price">Цена</th>
+						<th class="total">Сумма</th>
+						<th class="remove"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="photo">
+							<div>
+								<span>
+									<img src="./pic/mainbasket_photo1.jpg" width="90" height="110" alt="">
+								</span>
+							</div>
+						</td>
+						<td class="title">Большой Мишка Белый</td>
+						<td class="size">80см.</td>
+						<td class="color">
+							<span style="background:#dfd0bb"></span>
+						</td>
+						<td class="quantity">
+							<span>
+								<em class="minus">-</em>
+								<input type="text" value="2">
+								<em class="plus">+</em>
+							</span>
+						</td>
+						<td class="price">
+							<h5>1 500<em>p</em></h5>
+						</td>
+						<td class="total">
+							<h5>3 000<em>p</em></h5>
+						</td>
+						<td class="remove">
+							<button class="remove"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="photo">
+							<div>
+								<span>
+									<img src="./pic/mainbasket_photo2.jpg" width="90" height="110" alt="">
+								</span>
+							</div>
+						</td>
+						<td class="title">Большой Мишка Бурый</td>
+						<td class="size">120см.</td>
+						<td class="color">
+							<span style="background:#d07020"></span>
+						</td>
+						<td class="quantity">
+							<span>
+								<em class="minus">-</em>
+								<input type="text" value="1">
+								<em class="plus">+</em>
+							</span>
+						</td>
+						<td class="price">
+							<h5>1 500<em>p</em></h5>
+						</td>
+						<td class="total">
+							<h5>1 500<em>p</em></h5>
+						</td>
+						<td class="remove">
+							<button class="remove"></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div>
+				<h6><a href="#">Быстрый заказ</a></h6>
+				<div>
+					<button>Отправить</button>
+				</div>
+				<h5>Итого к оплате: <span>5 000<em>o</em></span></h5>
+			</div>
+		</div>
+		<div class="catalog">
+			<div>
+				<h2><span>Рекомендованные товары</span></h2>
+				<div>
+					<div class="picture">
+						<img src="./pic/catalog1.jpg" width="178" height="127" alt="">
+					</div>
+					<h3><a href="#">Большой Мишка Бурый</a></h3>
+					<h5>1 000<em>p</em></h5>
+					<h4>+ подарок <a href="#"><img src="./pic/gift1.jpg" width="141" height="141" alt=""></a></h4>
+					<div class="controls">
+						<button>В корзину</button>
+						<h6><a href="#">Быстрый заказ</a></h6>
+					</div>
+					<button class="fast">Быстрый просмотр</button>
+				</div>
+				<div>
+					<div class="picture">
+						<img src="./pic/catalog2.jpg" width="101" height="153" alt="">
+					</div>
+					<h3><a href="#">Большой Мишка Бурый</a></h3>
+					<h5>2 500<em>p</em></h5>
+					<h4>+ подарок <a href="#"><img src="./pic/gift2.jpg" width="141" height="141" alt=""></a></h4>
+					<div class="controls">
+						<button>В корзину</button>
+						<h6><a href="#">Быстрый заказ</a></h6>
+					</div>
+					<button class="fast">Быстрый просмотр</button>
+				</div>
+				<div>
+					<div class="picture">
+						<img src="./pic/catalog3.jpg" width="119" height="143" alt="">
+					</div>
+					<h3><a href="#">Большой Мишка Бурый</a></h3>
+					<h5>6 200<em>p</em></h5>
+					<h4>+ подарок <a href="#"><img src="./pic/gift3.jpg" width="141" height="141" alt=""></a></h4>
+					<div class="controls">
+						<button>В корзину</button>
+						<h6><a href="#">Быстрый заказ</a></h6>
+					</div>
+					<button class="fast">Быстрый просмотр</button>
+				</div>
+				<div>
+					<div class="picture">
+						<img src="./pic/catalog4.jpg" width="129" height="148" alt="">
+					</div>
+					<h3><a href="#">Большой Мишка Бурый</a></h3>
+					<h5>900<em>p</em></h5>
+					<h4>+ подарок <a href="#"><img src="./pic/gift4.jpg" width="141" height="141" alt=""></a></h4>
+					<div class="controls">
+						<button>В корзину</button>
+						<h6><a href="#">Быстрый заказ</a></h6>
+					</div>
+					<button class="fast">Быстрый просмотр</button>
+				</div>
+				<h6><a href="#">Перейти в каталог</a></h6>
+			</div>
+		</div>
+		<div class="reviews">
+			<div>
+				<div>
+					<div>
+						<div>
+							vk comments
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div>
+					<div class="information">
+						<h3>Информация о компании</h3>
+						<ul>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Каталог</a></li>
+							<li><a href="#">О магазине</a></li>
+							<li><a href="#">Оплата и доставка</a></li>
+							<li><a href="#">Для партнеров</a></li>
+							<li><a href="#">Товары оптом под заказ</a></li>
+							<li><a href="#">Обратная связь</a></li>
+						</ul>
+						<div>
+							<p>Мы в соцсетях</p>
+							<ul>
+								<li><a href="#"><img src="./img/vkontakte_icon.png" width="30" height="60" alt=""></a></li>
+								<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="30" height="60" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="contacts">
+						<h3>Контакты</h3>
+						<p><span>+ 7 800 775 93 18</span> (бесплатно)</p>
+						<p><span>+ 7 913 217 77 90</span> (оптовый отдел)</p>
+						<p>itoys.su@gmail.com</p>
+						<p>iToys.su</p>
+					</div>
+					<div class="more">
+						<div class="legal">
+							<h3>Правовая информация</h3>
+							<ul>
+								<li><a href="#">Гарантия безопасности</a></li>
+								<li><a href="#">Договор оферты</a></li>
+							</ul>
+						</div>
+						<div class="payment">
+							<h3>Платежные системы</h3>
+							<ul>
+								<li><a href="#"><img src="./img/visa_icon.png" width="64" height="64" alt=""></a></li>
+								<li><a href="#"><img src="./img/mastercard_icon.png" width="64" height="64" alt=""></a></li>
+								<li><a href="#"><img src="./img/paypal_icon.png" width="64" height="64" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="line">
+						<p class="copy">© Fun Me 2014</p>
+						<p class="author">Разработка сайта  - <a href="http://letsrock.pro" target="_blank"><img src="./img/author_logo.png" width="91" height="24" alt=""></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fade"></div>
+	<div class="modal call">
+		<h3>Оставьте свой номер и мы вам перезвоним!</h3>
+		<p><input type="text" placeholder="Ваше имя"></p>
+		<p><input type="text" placeholder="Телефон"></p>
+		<div>
+			<button>Отправить</button>
+		</div>
+	</div>
+	<div class="modal fastorder">
+		<div>
+			<span class="sale"></span>
+			<!--<span class="new"></span>
+			<span class="hit"></span>-->
+			<div class="pictures">
+				<div class="container">
+					<div>
+						<img src="./pic/fastorder_product1.jpg" width="255" height="309" alt="">
+					</div>
+					<div>
+						<img src="./pic/fastorder_product2.jpg" width="255" height="309" alt="">
+					</div>
+				</div>
+			</div>
+			<h3>Большой Мишка</h3>
+			<p>Большой и тёплый мишка. В семье сразу наблюдается появление уютной атмосферы и радости ребёнка, которому представилась возможность заснуть с мягким подарком.</p>
+			<p>Плюшевый мишка уже при галстучке и при случае с букетиком цветов может заглянуть и к девушке на свидание!</p>
+			<div class="options">
+				<div>
+					<p>Цвет:</p>
+					<ul class="color">
+						<li data-color="рыжий"><img src="./img/color1_icon.png" width="44" height="44" alt=""></li>
+						<li data-color="бурый"><img src="./img/color2_icon.png" width="44" height="44" alt=""></li>
+						<li data-color="белый"><img src="./img/color3_icon.png" width="44" height="44" alt=""></li>
+					</ul>
+				</div>
+				<div>
+					<p>Размер:</p>
+					<ul class="size">
+						<li data-size="80см.">80см.</li>
+						<li data-size="120см.">120см.</li>
+						<li data-size="160см.">160см.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="gift">
+				<h5>Выберите бесплатный подарок</h5>
+				<ul>
+					<li data-gift="Подарок 1"><img src="./pic/gift1.jpg" width="87" height="87" alt=""></li>
+					<li data-gift="Подарок 2"><img src="./pic/gift2.jpg" width="87" height="87" alt=""></li>
+					<li data-gift="Подарок 3"><img src="./pic/gift3.jpg" width="87" height="87" alt=""></li>
+					<li data-gift="Подарок 4"><img src="./pic/gift4.jpg" width="87" height="87" alt=""></li>
+				</ul>
+			</div>
+			<div class="controls">
+				<h5>6 200<em>p</em></h5>
+				<button>В корзину</button>
+				<h6><a href="#">Быстрый заказ</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="modal message">
+		<div>
+			<button class="back"></button>
+			<h3>Оплатить заказ</h3>
+			<p>Вы хотите оплатить через<br> систему www.robokassa.ru</p>
+			<p>счет № <strong>148</strong> 06.06.2014</p>
+			<p>сумма к оплате по счету: <strong>1 500. 00</strong> руб.</p>
+			<div>
+				<button>Оплатить</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal payment">
+		<div>
+			<button class="back"></button>
+			<h3>Оплатить заказ</h3>
+			<p><input type="text" placeholder="Имя получателя *"></p>
+			<p><input type="text" placeholder="Страна *"></p>
+			<p><input type="text" placeholder="Город *"></p>
+			<p><input type="text" placeholder="E-mail *"></p>
+			<p>
+				<select>
+					<option>Доставка *</option>
+					<option>Доставка *</option>
+				</select>
+			</p>
+			<p>
+				<select>
+					<option>Cпособ оплаты *</option>
+					<option>Cпособ оплаты *</option>
+				</select>
+			</p>
+			<p><input type="text" placeholder="Контактный номер телефона *"></p>
+			<p><input type="text" placeholder="Индекс получателя"></p>
+			<p><input type="text" placeholder="Адрес получателя *"></p>
+			<h5>
+				<span class="order">Сумма заказа <span>5 000<em>o</em></span></span>
+				<span class="deliveery">Сумма доставки <span>5 000<em>o</em></span></span>
+			</h5>
+			<div>
+				<button>Продолжить</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
