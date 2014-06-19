@@ -1386,30 +1386,6 @@ button::-moz-focus-inner {
 .certificates ul li:first-child {
 	margin-left:-1px;
 }
-
-/*.certificates ul li:hover {
-	-webkit-animation: fontbulger 2s linear infinite;
-}
-@-webkit-keyframes fontbulger {
-  0% {
-	  -webkit-transform: perspective( 600px ) rotateY( 0 );
-
-  }
-  25% {
-	  -webkit-transform: perspective( 600px ) rotateY( 15deg );
-
-  }
-  50% {
-	  -webkit-transform: perspective( 600px ) rotateY( -0 );
-  }
-  75% {
-	  -webkit-transform: perspective( 600px ) rotateY( -15deg );
-  }
-  100% {
-	  -webkit-transform: perspective( 600px ) rotateY( 0 );
-  }
-}*/
-
 .certificates ul li div {
 	position:absolute;
 	left:15px;
@@ -3537,4 +3513,188 @@ button::-moz-focus-inner {
 	font-family:'Kelson Sans', sans-serif;
 	text-transform:uppercase;
 	margin:0;
+}
+
+.modal.orderform {
+	width:340px;
+	text-align:center;
+	padding:34px 71px 20px;
+	margin-left:-241px;
+}
+.modal.orderform h3 {
+	color:#41352c;
+	font-size:24px;
+	line-height:28px;
+	font-weight:normal;
+    font-family:'Kelson Sans', sans-serif;
+	text-align:center;
+	padding:0;
+	margin:0 50px 37px;
+}
+.modal.orderform p {
+	margin:0 0 21px;
+}
+.modal.orderform p input {
+	position:relative;
+	width:324px;
+	color:#a0cff9;
+	font-size:18px;
+    font-family:'Kelson Sans', sans-serif;
+	padding:5px 6px; 
+	background:#41352c;
+	border:2px solid #41352c;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	behavior:url('./pie.htc');
+}
+.modal.orderform p ::-webkit-input-placeholder {
+	color:#a0cff9;
+}
+.modal.orderform p :-moz-placeholder {
+	color:#a0cff9;
+}
+.modal.orderform p ::-moz-placeholder {
+	color:#a0cff9;
+}
+.modal.orderform p :-ms-input-placeholder {
+	color:#a0cff9;
+}
+.modal.orderform .controls {
+	position:relative;
+	display:inline-block;
+	margin:16px 0 20px;
+}
+.modal.orderform .controls:before, .modal.orderform  .controls:after {
+	content:'';
+	position:absolute;
+	top:23px;
+	width:57px;
+	border-bottom:1px dashed #41352c;
+}
+.modal.orderform .controls:before {
+	left:-89px;
+}
+.modal.orderform .controls:after {
+	right:-89px;
+}
+.modal.orderform .controls button {
+	position:relative;
+	display:inline-block;
+	color:#4f7faa;
+	font-size:18px;
+	line-height:22px;
+	font-family:'Kelson Sans', sans-serif;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:13px 29px 9px 28px;
+	background:url('../img/header_call_button.png') repeat-x top;
+	border:1px solid #cecece;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:1px 2px 0 rgba(0,0,0,0.24);
+	-moz-box-shadow:1px 2px 0 rgba(0,0,0,0.24);
+	box-shadow:1px 2px 0 rgba(0,0,0,0.24);
+	behavior:url('./pie.htc');
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.modal.orderform .controls button:hover {
+	color:#71a6d5;
+	margin:2px 0 -2px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.modal.orderform .complete {
+	text-align:left;
+	padding:33px 0 87px;
+	margin:0 0 39px;
+	background:url('../img/complete_icon.png') no-repeat center bottom;
+}
+.modal.orderform .complete p {
+	color:#41352c;
+	font-size:18px;
+	line-height:30px;
+	font-family:'Kelson Sans', sans-serif;
+	margin:0;
+}
+.modal.orderform .tovar {
+	position:relative;
+	padding:0 0 5px 101px;
+}
+.modal.orderform .tovar > div {
+	position:absolute;
+	left:-50px;
+	top:7px;
+	width:132px;
+	height:156px;
+}
+.modal.orderform .tovar > div img {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	max-width:132px;
+	max-height:156px;
+	margin:auto;
+}
+.modal.orderform .tovar h3 {
+	text-align:left;
+	margin:0 0 38px;
+}
+.modal.orderform .tovar ul {
+	position:relative;
+	width:200px;
+	padding:24px 20px 25px;
+	margin:0 0 20px;
+	background:#41352c;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	behavior:url('./pie.htc');
+}
+.modal.orderform .tovar ul li {
+	height:22px;
+	text-align:left;
+	padding:0 0 0 80px;
+	margin:26px 0 0;
+}
+.modal.orderform .tovar ul li:first-child {
+	margin-top:0;
+}
+.modal.orderform .tovar ul li h5 {
+	float:left;
+	width:70px;
+	color:#a0cff9;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	font-family:'Kelson Sans', sans-serif;
+	padding:0;
+	margin:0 10px 0 -80px;
+}
+.modal.orderform .tovar ul li p {
+	display:inline-block;
+	color:#ffffff;
+	font-size:14px;
+	line-height:18px;
+	vertical-align:top;
+	margin:3px 0 1px;
+}
+.modal.orderform .tovar ul li .color {
+	position:relative;
+	display:inline-block;
+	width:28px;
+	height:28px;
+	margin:-10px 0 -6px;
+	border:5px solid #e8e8e8;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	behavior:url('./pie.htc');
 }

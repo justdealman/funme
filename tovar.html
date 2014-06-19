@@ -98,8 +98,8 @@
 				</div>
 				<div class="controls">
 					<h5>6 200<em>p</em></h5>
-					<button>В корзину</button>
-					<h6><a href="#">Быстрый заказ</a></h6>
+					<button class="addbasket">В корзину</button>
+					<h6><a href="#" class="fastordermodal">Быстрый заказ</a></h6>
 				</div>
 			</div>
 		</div>
@@ -322,6 +322,41 @@
 				<button>В корзину</button>
 				<h6><a href="#">Быстрый заказ</a></h6>
 			</div>
+		</div>
+	</div>
+	<div class="modal orderform tobasket">
+		<div class="tovar">
+			<div>
+				<img src="./pic/fast_tovar.jpg" width="116" height="147" alt="">
+			</div>
+			<h3>Большой мишка</h3>
+			<ul>
+				<li>
+					<h5>Цвет:</h5>
+					<span class="color" style="background:#d07020"></span>
+				</li>
+				<li>
+					<h5>Размер:</h5>
+					<p>80 см.</p>
+				</li>
+			</ul>
+		</div>
+		<div class="controls">
+			<button>В корзину</button>
+		</div>
+	</div>
+	<div class="modal orderform step1">
+		<h3>Быстрый заказ</h3>
+		<p><input type="text" placeholder="Ваше имя:"></p>
+		<p><input type="text" placeholder="Телефон:"></p>
+		<div class="controls">
+			<button>Отправить</button>
+		</div>
+	</div>
+	<div class="modal orderform step2">
+		<div class="complete">
+			<p>Иванов Иван!</p>
+			<p>Ваш заказ принят, наш менеджер<br> Вам скоро перезвонит</p>
 		</div>
 	</div>
 </body>

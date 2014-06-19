@@ -250,4 +250,36 @@ $(document).ready(function() {
 	if ( $('.process').next('.delivery').length > 0 ) {
 		$('.delivery').addClass('nobg');
 	}
+	$('.fastordermodal').bind('click', function() {
+		$('.modal.orderform.step1, .fade').fadeIn(250);
+		bh = $(window).scrollTop();
+		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		return false;
+	});
+	$('.orderform.step1 .controls button').bind('click', function() {
+		$('.modal.orderform.step1').fadeOut(250);
+		$('.modal.orderform.step2').fadeIn(250).delay(1500).fadeOut(250, function() {
+			$('.fade').fadeOut(0);
+			$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+			$(window).scrollTop(bh);
+		});
+		return false;
+	});
+	$('.addbasket').bind('click', function() {
+		$('.modal.orderform.tobasket, .fade').fadeIn(250);
+		bh = $(window).scrollTop();
+		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		return false;
+	});
+	$('.modal.orderform.tobasket .controls button').bind('click', function() {
+		$('.modal.orderform.tobasket, .fade').fadeOut(250);
+		alert('Товар добавлен в корзину');
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$(window).scrollTop(bh);
+		return false;
+	});
+	$('.modal.fastorder .options div .color li:nth-child(4n), .modal.fastorder .options div .size li:nth-child(4n), .modal.fastorder .gift ul li:nth-child(4n), .product .options div .color li:nth-child(4n), .product .options div .size li:nth-child(4n), .product .gift ul li:nth-child(4n)').css({'margin-right': '-3px'});
+	$('.countdown-section:nth-child(3) .countdown-amount').css({'color': '#83b5e1'});
+	$('.countdown-section:nth-child(4) .countdown-amount').css({'color': '#ffad03'});
+	$('.content .description > div:last-child').css({'padding-bottom': '0', 'margin-bottom': '0', 'border-bottom-width': '0'});
 });
