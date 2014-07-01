@@ -282,4 +282,13 @@ $(document).ready(function() {
 	$('.countdown-section:nth-child(3) .countdown-amount').css({'color': '#83b5e1'});
 	$('.countdown-section:nth-child(4) .countdown-amount').css({'color': '#ffad03'});
 	$('.content .description > div:last-child').css({'padding-bottom': '0', 'margin-bottom': '0', 'border-bottom-width': '0'});
+	$('.product .picture').slides({
+		generatePagination: false,
+		generateNextPrev: true,
+		container: 'container',
+		effect: 'fade',
+		fadeSpeed: 250,
+		play: 10000,
+		pause: 2500
+	});
 });

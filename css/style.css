@@ -3441,7 +3441,44 @@ button::-moz-focus-inner {
 	width:390px;
 	height:472px;
 }
-.product .picture img {
+.product .picture .prev, .product .picture .next {
+	position:absolute;
+	top:50%;
+	width:19px;
+	height:14px;
+	cursor:pointer;
+	vertical-align:top;
+	margin:-7px 0 0;
+	transition:margin 0.25s ease-in-out;
+	-webkit-transition:margin 0.25s ease-in-out;
+	-moz-transition:margin 0.25s ease-in-out;
+	-o-transition:margin 0.25s ease-in-out;
+}
+.product .picture .prev {
+	left:-18px;
+	background:url('../img/fastorder_pictures_prev.png') no-repeat left top;
+}
+.product .picture .next {
+	right:-18px;
+	background:url('../img/fastorder_pictures_next.png') no-repeat left top;
+}
+.product .picture .prev:hover {
+	margin-left:-3px;
+}
+.product .picture .next:hover {
+	margin-right:-3px;
+}
+.product .picture .prev:hover, .product .picture .next:hover {
+	background-position:0 -13px;
+}
+.product .picture > .container, .product .picture > .container > div > div {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	width:390px;
+	height:472px;
+}
+.product .picture > .container, .product .picture > div > div img {
 	position:absolute;
 	top:0;
 	right:0;
