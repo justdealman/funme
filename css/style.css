@@ -208,27 +208,39 @@ button::-moz-focus-inner {
 }
 .header .call {
 	position:absolute;
-	left:523px;
-	top:30px;
-	width:200px;
-	text-align:center;
-}
-.header .call p {
-	font-size:14px;
-	line-height:18px;
-	margin:0 0 2px;
+	left:526px;
+	top:21px;
+	width:216px;
 }
 .header .call h3 {
-	font-size:26px;
-	line-height:30px;
+	color:#41352c;
+	font-size:18px;
+	line-height:24px;
 	font-family:'Kelson Sans', sans-serif;
+	white-space:nowrap;
 	padding:0;
 	margin:0 0 2px;
+}
+.header .call h3 span {
+	font-size:14px;
+	font-weight:normal;
+	font-family:'Calibri', sans-serif;
+	padding:0 7px 0 0;
+}
+.header .call h3 em {
+	display:block;
+	font-size:11px;
+	line-height:14px;
+	font-weight:normal;
+	font-style:normal;
+	font-family:'Calibri', sans-serif;
+	text-align:right;
+	margin:-4px 0 0;
 }
 .header .call > div {
 	position:relative;
 	display:inline-block;
-	margin:18px 0 0;
+	margin:18px 0 0 22px;
 }
 .header .call > div:before, .header .call > div:after {
 	content:'';
