@@ -197,8 +197,8 @@ $(document).ready(function() {
 		play: 10000,
 		pause: 2500
 	});
-	$('.countdown.num1').countdown({ until: new Date(2014, 7-1, 1)}); 
-	$('.countdown.num2').countdown({ until: new Date(2014, 8-1, 1)});
+	$('.countdown.num1').countdown({ until: new Date(2014, 9-1, 1)}); 
+	$('.countdown.num2').countdown({ until: new Date(2014, 10-1, 1)});
 	if ( $('.catalog').next('.reviews').length > 0 ) {
 		$('.catalog').addClass('shadow');
 	}
@@ -282,13 +282,4 @@ $(document).ready(function() {
 	$('.countdown-section:nth-child(3) .countdown-amount').css({'color': '#83b5e1'});
 	$('.countdown-section:nth-child(4) .countdown-amount').css({'color': '#ffad03'});
 	$('.content .description > div:last-child').css({'padding-bottom': '0', 'margin-bottom': '0', 'border-bottom-width': '0'});
-	$('.product .picture').slides({
-		generatePagination: false,
-		generateNextPrev: true,
-		container: 'container',
-		effect: 'fade',
-		fadeSpeed: 250,
-		play: 10000,
-		pause: 2500
-	});
 });
