@@ -1364,6 +1364,7 @@ button::-moz-focus-inner {
 	background:url('../img/delivery_span.png') no-repeat left top;
 }
 .certificates {
+	position:relative;
 	background:url('../img/reasons_bg.png') repeat;
 }
 .certificates > div {
@@ -3746,4 +3747,25 @@ button::-moz-focus-inner {
 	-moz-border-radius:50%;
 	border-radius:50%;
 	behavior:url('./pie.htc');
+}
+
+.seotext {
+	position:relative;
+	margin:-18px 0 0;
+	background:url('../img/bg.png') repeat;
+}
+.seotext > div {
+	width:960px;
+	padding:49px 0 93px;
+	margin:0 auto;
+}
+.seotext p {
+	line-height:14px;
+	margin:0 0 14px;
+}
+.seotext ul {
+	margin:0 0 14px;
+}
+.seotext ul li {
+	line-height:14px;
 }
