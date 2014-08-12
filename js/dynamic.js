@@ -134,27 +134,43 @@ $(document).ready(function() {
 	$('.header .call button').bind('click', function() {
 		$('.modal.call, .fade').fadeIn(250);
 		bh = $(window).scrollTop();
-		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		$('.wrapper').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
 		return false;
 	});
 	$('.catalog > div > div .fast').bind('click', function() {
 		$('.modal.fastorder, .fade').fadeIn(250);
 		bh = $(window).scrollTop();
 		console.log(bh);
-		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		$('.wrapper').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		if ( $('.modal.fastorder').outerHeight() > $(window).height() ) {
+			$('.modal.fastorder').css({
+				'position': 'relative',
+				'left': 'auto',
+				'top': 'auto',
+				'margin': '0 auto'
+			});
+		}
+		else {
+			$('.modal.fastorder').css({
+				'position': 'fixed',
+				'left': '50%',
+				'top': '50%',
+				'margin': -$('.modal.fastorder').outerHeight()/2+'px 0 0 -480px'
+			});
+		}
 		return false;
 	});
 	$('.modal .close').bind('click', function() {
 		$(this).parent().fadeOut(250);
 		$('.fade').fadeOut(250);
-		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('.wrapper').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
 		$(window).scrollTop(bh);
 		return false;
 	});
 	$('.fade').bind('click', function() {
 		$(this).fadeOut(250);
 		$('.modal').fadeOut(250);
-		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('.wrapper').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
 		$(window).scrollTop(bh);
 		return false;
 	});
