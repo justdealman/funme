@@ -768,7 +768,7 @@ button::-moz-focus-inner {
 	font-family:'Kelson Sans', sans-serif;
 	white-space:nowrap;
 	padding:2px 15px;
-	margin:0 0 13px 44px;
+	margin:0 0 23px 44px;
 	background:url('../img/catalog_h5.png') repeat-x top;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
@@ -790,6 +790,12 @@ button::-moz-focus-inner {
 	font-style:normal;
 	font-family:'Rouble', sans-serif;
 	padding:0 0 0 4px;
+}
+.catalog h5 span {
+	color:#ffffff;
+	font-size:13px;
+	line-height:16px;
+	text-decoration:line-through;
 }
 .catalog h4 {
 	position:relative;
@@ -1854,7 +1860,6 @@ button::-moz-focus-inner {
 }
 .modal.fastorder .options div .size li {
 	position:relative;
-	overflow:hidden;
 	display:inline-block;
 	color:#41352c;
 	font-size:14px;
@@ -1870,6 +1875,18 @@ button::-moz-focus-inner {
 }
 .modal.fastorder .options div .size li:nth-child(4n) {
 	margin-right:-3px;
+}
+.modal.fastorder .options div .size li > div {
+	position:absolute;
+	left:0;
+	top:33px;
+	z-index:100;
+	display:none;
+	background:#ffffff;
+	border:5px solid #e8e8e8;
+}
+.modal.fastorder .options div .size li:hover > div {
+	display:block;
 }
 .modal.fastorder .gift {
 	margin:0 0 39px;
@@ -1954,6 +1971,12 @@ button::-moz-focus-inner {
 	font-style:normal;
 	font-family:'Rouble', sans-serif;
 	padding:0 0 0 4px;
+}
+.modal.fastorder .controls h5 span {
+	color:#ffffff;
+	font-size:13px;
+	line-height:16px;
+	text-decoration:line-through;
 }
 .modal.fastorder .controls button {
 	position:relative;
@@ -2528,6 +2551,12 @@ button::-moz-focus-inner {
 }
 .mainbasket table td.total h5 {
 	color:#ffad03;
+}
+.mainbasket table td.total h5 span {
+	color:#ffffff;
+	font-size:13px;
+	line-height:16px;
+	text-decoration:line-through;
 }
 .mainbasket table td em {
 	font-size:24px;
@@ -3367,6 +3396,12 @@ button::-moz-focus-inner {
 }
 .product .controls h5 {
 	color:#ffad03;
+}
+.product .controls h5 span {
+	color:#ffffff;
+	font-size:13px;
+	line-height:16px;
+	text-decoration:line-through;
 }
 .product .controls h5 em {
 	font-size:24px;

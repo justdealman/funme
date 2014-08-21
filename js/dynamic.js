@@ -158,6 +158,11 @@ $(document).ready(function() {
 				'margin': -$('.modal.fastorder').outerHeight()/2+'px 0 0 -480px'
 			});
 		}
+		$('.modal.fastorder .options div .size li').each(function() {
+			if ( $(this).offset().left+$(this).children('div').outerWidth() > $('.fastorder').offset().left+$('.fastorder').outerWidth() ) {
+				$(this).children('div').css({'left': $('.fastorder').offset().left+$('.fastorder').outerWidth()-($(this).offset().left+$(this).children('div').outerWidth())-10+'px'});
+			}
+		});
 		return false;
 	});
 	$('.modal .close').bind('click', function() {
