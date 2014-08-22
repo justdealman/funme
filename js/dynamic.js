@@ -134,14 +134,14 @@ $(document).ready(function() {
 	$('.header .call button').bind('click', function() {
 		$('.modal.call, .fade').fadeIn(250);
 		bh = $(window).scrollTop();
-		$('.wrapper').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
 		return false;
 	});
 	$('.catalog > div > div .fast').bind('click', function() {
 		$('.modal.fastorder, .fade').fadeIn(250);
 		bh = $(window).scrollTop();
 		console.log(bh);
-		$('.wrapper').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
 		if ( $('.modal.fastorder').outerHeight() > $(window).height() ) {
 			$('.modal.fastorder').css({
 				'position': 'relative',
@@ -168,14 +168,14 @@ $(document).ready(function() {
 	$('.modal .close').bind('click', function() {
 		$(this).parent().fadeOut(250);
 		$('.fade').fadeOut(250);
-		$('.wrapper').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
 		$(window).scrollTop(bh);
 		return false;
 	});
 	$('.fade').bind('click', function() {
 		$(this).fadeOut(250);
 		$('.modal').fadeOut(250);
-		$('.wrapper').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
 		$(window).scrollTop(bh);
 		return false;
 	});
