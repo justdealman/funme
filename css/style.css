@@ -427,6 +427,16 @@ button::-moz-focus-inner {
 	position:relative;
 	background:url('../img/slider_bg.jpg') no-repeat center top;
 }
+.slider img.map {
+	position:absolute;
+	left:50%;
+	top:36px;
+	z-index:500;
+	width:721px;
+	height:476px;
+	margin-left:-373px;
+	outline:none;
+}
 .slider > div {
 	position:relative;
 	width:960px;
@@ -578,11 +588,11 @@ button::-moz-focus-inner {
 }
 .slider > div .container > div > div .offer .information h6 a:after {
 	content:'';
-	position:absolute;
-	right:-34px;
-	top:6px;
+	display:inline-block;
 	width:19px;
 	height:14px;
+	vertical-align:top;
+	margin:6px -34px 0 15px;
 	background:url('../img/offer_more_arrow.png') no-repeat left top;
 }
 .slider > div .container > div > div .offer .countdown {

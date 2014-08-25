@@ -92,8 +92,12 @@ $(document).ready(function() {
 		effect: 'fade',
 		fadeSpeed: 250,
 		play: 0,
-		pause: 2500
+		pause: 2500,
+		animationComplete: function() {
+			$('map[name="area"] area').attr('href', $('.slider .slides_control div:visible').attr('data-href'));
+        }
 	});
+	$('map[name="area"] area').attr('href', $('.slider .slides_control div:first-child').attr('data-href'));
 	$('.slider .container > div > div div.picture').each(function() {
 		var aw = $(this).width();
 		var ah = $(this).height();
