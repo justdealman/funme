@@ -307,4 +307,5 @@ $(document).ready(function() {
 	$('.countdown-section:nth-child(3) .countdown-amount').css({'color': '#83b5e1'});
 	$('.countdown-section:nth-child(4) .countdown-amount').css({'color': '#ffad03'});
 	$('.content .description > div:last-child').css({'padding-bottom': '0', 'margin-bottom': '0', 'border-bottom-width': '0'});
+	$('.countdown.num3').countdown({ until: new Date(2014, 12-1, 1)});
 });
